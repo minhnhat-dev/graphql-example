@@ -1,3 +1,4 @@
 module.exports = {
-    TypeProdTypes: require('../types/product-types.type')
-}
+  TypeProdTypes: require('./product-types.type'),
+  UserType: require('./UserType'),
+};

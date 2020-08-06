@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5663e78f-f6bb-40f4-bdb1-cbdd642ae682" name="Default Changelist" comment="" />
+    <list default="true" id="5663e78f-f6bb-40f4-bdb1-cbdd642ae682" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1f1WRFwhnzEiQs13dl0BqpiAlRX" />
   <component name="ProjectViewState">
@@ -16,7 +21,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/graphql/mutations/product-types" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -47,6 +52,8 @@
       <workItem from="1595386069888" duration="22463000" />
       <workItem from="1595469973813" duration="58000" />
       <workItem from="1595476834640" duration="12483000" />
+      <workItem from="1596620693023" duration="1592000" />
+      <workItem from="1596627477435" duration="389000" />
     </task>
     <servers />
   </component>
@@ -58,10 +65,10 @@
       <screen x="72" y="27" width="1848" height="1173" />
     </state>
     <state x="729" y="362" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/72.27.1848.1173@72.27.1848.1173" timestamp="1595479757138" />
-    <state x="779" y="371" width="424" height="491" key="FileChooserDialogImpl" timestamp="1595476842084">
+    <state x="779" y="371" width="424" height="491" key="FileChooserDialogImpl" timestamp="1596621788638">
       <screen x="72" y="27" width="1848" height="1173" />
     </state>
-    <state x="779" y="371" width="424" height="491" key="FileChooserDialogImpl/72.27.1848.1173@72.27.1848.1173" timestamp="1595476842084" />
+    <state x="779" y="371" width="424" height="491" key="FileChooserDialogImpl/72.27.1848.1173@72.27.1848.1173" timestamp="1596621788638" />
     <state x="687" y="352" width="618" height="522" key="find.popup" timestamp="1595414602065">
       <screen x="72" y="27" width="1848" height="1173" />
     </state>

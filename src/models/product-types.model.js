@@ -1,12 +1,12 @@
-'use strict'
-const mongoose = require('mongoose')
-const Schema = mongoose.Schema
+const mongoose = require('mongoose');
+
+const { Schema } = mongoose;
 
 const Status = Object.freeze({
   active: 'active',
   inactive: 'inactive',
-  deleted: 'deleted'
-})
+  deleted: 'deleted',
+});
 
 const ProductTypeSchema = new Schema(
   {
@@ -15,41 +15,41 @@ const ProductTypeSchema = new Schema(
       required: true,
       unique: true,
       maxLength: 50,
-      minLength: 1
+      minLength: 1,
     },
     code: {
       type: String,
       required: true,
       unique: true,
       maxLength: 20,
-      minLength: 1
+      minLength: 1,
     },
     description: { type: String, maxLength: 200 },
     status: {
       type: String,
       default: Status.inactive,
       required: true,
-      enum: Object.values(Status)
+      enum: Object.values(Status),
     },
     author: {
       id: { type: String, required: true },
-      display_name: { type: String }
+      display_name: { type: String },
     },
-    deletee: Boolean
+    deletee: Boolean,
   },
   {
     versionKey: false,
     timestamps: { createdAt: 'creation_date', updatedAt: 'modification_date' },
     toJSON: {
-      virtuals: true
-    }
-  }
-)
+      virtuals: true,
+    },
+  },
+);
 
-Object.assign(ProductTypeSchema.statics, { Status })
+Object.assign(ProductTypeSchema.statics, { Status });
 
 module.exports = mongoose.model(
   'ProductTypes',
   ProductTypeSchema,
-  'product-types'
-)
+  'product-types',
+);
