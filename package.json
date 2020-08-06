@@ -22,6 +22,7 @@
     "graphql-server-express": "^1.4.1",
     "graphql-tools": "^6.0.14",
     "helmet": "^4.0.0",
+    "http-errors": "^1.8.0",
     "lodash": "^4.17.19",
     "mongoose": "^5.9.25",
     "morgan": "^1.10.0"
