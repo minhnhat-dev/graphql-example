@@ -10,9 +10,8 @@ require('dotenv').config();
 class ServerConfig {
   constructor({ port, middlewares, routers }) {
     this.app = Express();
-    this.app.set('env', process.env.NODE_ENV);
+    this.app.set('env', process.env.NODE_ENV || 'development');
     this.app.set('port', port);
-
     /* connect apollo server */
     this.registerApolloServer();
 

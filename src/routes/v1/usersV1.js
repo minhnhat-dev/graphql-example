@@ -1,5 +1,6 @@
+const { UserController } = require('../../controllers');
+const { AsyncWrapper } = require('../../utils');
+
 module.exports = (router) => {
-  router.get('/register', (req, res, next) => {
-    res.json({ message: 'Helloword' });
-  });
+  router.post('/register', AsyncWrapper(UserController.register));
 };
