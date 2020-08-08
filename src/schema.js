@@ -1,12 +1,17 @@
 const { GraphQLObjectType, GraphQLSchema } = require('graphql');
-const { UserMutation } = require('./graphql/mutations');
-const { UserQuery } = require('./graphql/queries');
+const { UserMutation, PostMutation } = require('./graphql/mutations');
+const { UserQuery, PostQuery } = require('./graphql/queries');
 
 const RootQuery = new GraphQLObjectType({
   name: 'RootQuery',
   description: 'root query',
   fields: {
     ping: UserQuery.ping,
+    getUserById: UserQuery.getUserById,
+    getUsers: UserQuery.getUsers,
+    getPosts: PostQuery.getPosts,
+    getPostById: PostQuery.getPostById,
+    searchUsers: UserQuery.searchUsers,
   },
 });
 
@@ -15,6 +20,7 @@ const RootMutation = new GraphQLObjectType({
   description: 'root mutation',
   fields: {
     logIn: UserMutation.logIn,
+    createPost: PostMutation.createPost,
   },
 });
 
