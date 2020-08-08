@@ -1,22 +1,48 @@
-const { UserInput } = require('../inputTypes');
-const { UsersModel } = require('../../models');
-const { UserType } = require('../types');
+const {
+  GraphQLString,
+} = require('graphql');
+const createError = require('http-errors');
+const { UserService } = require('../../services');
+const { AuthUtils, BcryptUtils } = require('../../utils');
+const { AuthType } = require('../types');
 
-const createUser = {
-  type: UserType,
+const logIn = {
+  type: AuthType,
   description: 'The mutation that allow you can create new user',
   args: {
-    user: {
-      name: 'user',
-      type: UserInput.create,
+    email: {
+      name: 'email',
+      type: GraphQLString,
+    },
+    password: {
+      name: 'password',
+      type: GraphQLString,
     },
   },
-  resolve: (_, {user}) => {
+  resolve: async (_, args) => {
     /* validate data */
-    
-  }
+    const { email, password } = args;
+    const user = await UserService.findOne({ email });
+    if (!user) {
+      throw new createError.BadRequest('Email is valid');
+    }
+
+    /* validate password */
+    const isValid = BcryptUtils.comparePassword(password, user.password);
+    if (!isValid) {
+      throw new createError.BadRequest('Password not valid');
+    }
+    console.log('user', user);
+    /* general token */
+    const { _id } = user;
+    const token = AuthUtils.sign({ _id });
+    return {
+      token,
+      user,
+    };
+  },
 };
 
 module.exports = {
-    createUser
-}
+  logIn,
+};

@@ -12,12 +12,11 @@ const register = async (req, res) => {
   if (count) {
     throw new createError.BadRequest('Email already exist');
   }
-  console.log(email);
   const user = await UserService.create({ email, password });
+  console.log('user', user);
   /* register token */
   const { _id } = user;
   const token = AuthUtils.sign({ _id });
-  console.log('user', user);
   return res.status(200).send({ user, token });
 };
 

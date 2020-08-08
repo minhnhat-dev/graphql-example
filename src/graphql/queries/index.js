@@ -1,5 +1,5 @@
-const QueryProdTypes = require('./product-types/product-types.query')
+const UserQuery = require('./user.query');
 
 module.exports = {
- ...QueryProdTypes
-}
+  UserQuery,
+};

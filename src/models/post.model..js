@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const { BcryptUtils } = require('../utils');
 
 const { Schema } = mongoose;
 
@@ -32,26 +31,6 @@ const UserSchema = new Schema(
     },
   },
 );
-
-/**
- * Hook hide field safe
- */
-
-UserSchema.method('toJSON', function () {
-  const user = this.toObject();
-  delete user.password;
-  return user;
-});
-/**
-* Hook before save
-* Hash password
-*/
-UserSchema.pre('save', function (next) {
-  if (this.password) {
-    this.password = BcryptUtils.hashPassword(this.password);
-  }
-  next();
-});
 
 Object.assign(UserSchema.statics, { Status });
 

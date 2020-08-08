@@ -1,5 +1,5 @@
-const MutationProductTypes = require('./product-types/product-types.mutation');
+const UserMutation = require('./UserMutation');
 
 module.exports = {
-  ...MutationProductTypes,
+  UserMutation,
 };
