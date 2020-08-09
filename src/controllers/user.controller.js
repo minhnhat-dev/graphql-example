@@ -3,7 +3,7 @@ const { UserService } = require('../services');
 const { AuthUtils } = require('../utils');
 
 const register = async (req, res) => {
-  const { email, password, password2 } = req.body;
+  const { email, password, password2, sex } = req.body;
   if (password !== password2) {
     throw new createError.BadRequest('password not match');
   }
@@ -12,7 +12,7 @@ const register = async (req, res) => {
   if (count) {
     throw new createError.BadRequest('Email already exist');
   }
-  const user = await UserService.create({ email, password });
+  const user = await UserService.create({ email, password, sex });
   console.log('user', user);
   /* register token */
   const { _id } = user;

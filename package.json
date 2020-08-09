@@ -22,6 +22,7 @@
     "graphql": "^15.3.0",
     "graphql-server-express": "^1.4.1",
     "graphql-tools": "^6.0.14",
+    "graphql-type-json": "^0.3.2",
     "helmet": "^4.0.0",
     "http-errors": "^1.8.0",
     "jsonwebtoken": "^8.5.1",
