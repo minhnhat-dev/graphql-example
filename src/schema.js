@@ -1,6 +1,7 @@
 const { GraphQLObjectType, GraphQLSchema } = require('graphql');
 const { UserMutation } = require('./graphql/mutations');
 const { UserQuery } = require('./graphql/queries');
+const {UpperCaseDirective} = require('./graphql/directives');
 
 const RootQuery = new GraphQLObjectType({
   name: 'RootQuery',
